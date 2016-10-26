@@ -18,5 +18,13 @@ export default class TestSingleton {
 
     //Test 3
     Singleton.getInstance().doSomething(); // Logs: I am singleton!
+
+    //Test 4
+    try{
+      let _singleton = new Singleton();
+    }
+    catch(err){
+      console.log(err.message); //""Use Singleton.getInstance()!!!" is not a constructor"
+    }
   }
 }

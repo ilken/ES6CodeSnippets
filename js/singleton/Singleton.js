@@ -1,9 +1,13 @@
 var instance = null;
+var SINGLETON_ENFORCER = Symbol();
 
 export default class Singleton {
-	constructor()
+	constructor(enforcer)
 	{
-
+		if(enforcer !== SINGLETON_ENFORCER)
+		{
+			throw new("Use Singleton.getInstance()!!!");
+		}
 	}
 
 	doSomething()
@@ -15,7 +19,7 @@ export default class Singleton {
 	{
 		if (!instance)
 		{
-			instance = new Singleton();
+			instance = new Singleton(SINGLETON_ENFORCER);
 		}
 
 		return instance;
