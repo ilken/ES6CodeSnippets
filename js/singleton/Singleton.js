@@ -1,10 +1,11 @@
 var instance = null;
 var SINGLETON_ENFORCER = Symbol();
 
-export default class Singleton {
+export default class Singleton
+{
 	constructor(enforcer)
 	{
-		if(enforcer !== SINGLETON_ENFORCER)
+		if (enforcer !== SINGLETON_ENFORCER)
 		{
 			throw new("Use Singleton.getInstance()!!!");
 		}
