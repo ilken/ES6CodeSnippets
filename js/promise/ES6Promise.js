@@ -29,7 +29,7 @@ export default class ES6Promise
 			setTimeout(() =>
 			{
 				resolve("Success: Promise1");
-			}, 3000);
+			}, 1000);
 		});
 	}
 
@@ -40,7 +40,7 @@ export default class ES6Promise
 			setTimeout(() =>
 			{
 				resolve("Success: Promise2");
-			}, 3000);
+			}, 1000);
 		});
 	}
 }

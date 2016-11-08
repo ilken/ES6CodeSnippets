@@ -7,13 +7,13 @@ export default class Singleton
 	{
 		if (enforcer !== SINGLETON_ENFORCER)
 		{
-			throw new("Use Singleton.getInstance()!!!");
+			throw new Error("Use Singleton.getInstance()");
 		}
 	}
 
 	doSomething()
 	{
-		console.log("I am singleton!");
+		return "I am a singleton :(";
 	}
 
 	static getInstance()

@@ -1,15 +1,21 @@
 import ES6Promise from "../js/promise/ES6Promise";
-import
-{
-	expect
-}
-from "chai";
+const chai = require("chai");
+const chaiAsPromised = require("chai-as-promised");
+
+chai.use(chaiAsPromised);
+chai.should();
 
 describe("Promise Test", () =>
 {
-	it("Should test the parent class!", () =>
+	it("Should resolve a promise!", () =>
 	{
-		// let testPromise = new ES6Promise();
-		// testPromise.createPromise();
+		let instance = new ES6Promise();
+		return instance.fakePromise().should.eventually.equal("Success: Promise1");
+	});
+
+	it("Should resolve another promise!", () =>
+	{
+		let instance = new ES6Promise();
+		return instance.fakePromise2().should.eventually.equal("Success: Promise2");
 	});
 });

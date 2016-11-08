@@ -12,6 +12,11 @@ export default class Logger
 		this._logs[timestamp] = value;
 	}
 
+	addUnique(timestamp, value)
+	{
+		this._logs[Symbol(timestamp)] = value;
+	}
+
 	getAll()
 	{
 		return this._logs;
